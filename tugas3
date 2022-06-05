@@ -1,0 +1,33 @@
+const deret = (nilaiAwal, nilaiAkhir,dataArray) =>{
+    
+    let output = [];
+    if(typeof(nilaiAkhir) == 'number' && typeof(nilaiAwal == 'number')){
+        if(nilaiAwal > nilaiAkhir){
+            output = 'nilai awal harus lebih besar dari nilai akhir'
+        }else{
+            if(dataArray.length < 5 ){
+                output = 'jumlah data dalam dataArray harus lebih dari 5'
+            }else{
+                for (let index = 0; index < dataArray.length; index++) {
+                    if(dataArray[index] > nilaiAwal && dataArray[index] < nilaiAkhir ){
+                    output.push( dataArray[index]);
+                    output.sort(function(a,b){return a - b})
+    
+                    }else{
+                        output = 'nilai tidak ditemukan'
+                    }
+               }
+            }
+        }
+    } else{
+        output = 'nilai awal dan nilai akhir harus number'
+    }
+    
+
+    return output
+
+}
+
+console.log(deret(10,20,[1,1,1,1,1,1,1]))
+
+
