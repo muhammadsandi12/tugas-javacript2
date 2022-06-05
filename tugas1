@@ -1,0 +1,179 @@
+/** 
+ * method bawaan js
+ * 1. map
+ * map adalah metode pembuatan sebuah array baru yang diisi dengan pemanggilan fungsi yang disediakan pada setiap element
+ * beberapa parameter yang dapat digunakan
+ * - element  = element yang saat ini sedang diproses
+ * - index = index element yang saat ini sedang di proses
+ * - array = array yang di panggil
+*/
+
+/** penggunaan */
+const num = [1,2,3,4]
+
+const isi = num.map((angka, index, arr) => {
+
+    return angka
+})
+
+/** 
+ * method bawaan js
+ * 2. split 
+ * split adalah membagi string kedalam daftar substring  yang diurutkan menempatkan substring ini kedalam array
+ * beberapa parameter yang dapat digunakan
+ * - seperator = pola yang menjelaskan dimana setiap pemisahan harus terjadi 
+ * - limit = batasan jumlah string yang akan disertakan dalam array
+ *  
+*/
+
+/** penggunaan */
+
+let str = 'saya adalah orang dalam'
+let arr = str.split(" ", 4)
+console.log(arr)
+
+
+
+/** 
+ * method bawaan js
+ * 3. concat
+ * split adalah menggabungkan string ke string panggilan dan mengembalikan string baru
+ * parameter yang dapat digunakan
+ * - strN = 1 string atau lebih untuk digabungkan 
+ * 
+ *  
+*/
+
+/**penggunaan */
+
+let firstName = 'sandi';
+let lastName = 'maulana';
+let fullName = firstName.concat(' ',lastName)
+console.log(fullName)
+
+/** 
+ * method bawaan js
+ * 4. filter
+ * filter adalah metode untuk membuat array baru dengan semua element yang telah lulus pengujian yang di implementasikan dengan oleh fungsi yang disediakan 
+ * parameter yang dapat digunakan
+ * - element = element yang diproses
+ * - index = index dari element yang diproses dalam sebuah array 
+ * - array = aray dimana fungsi filter itu sendiri di panggil  
+*/
+
+/** penggunaan */
+
+const buah = ['semangka', 'rambutan', 'apel']
+const result = buah.filter(hurufBuah => hurufBuah.length > 6 )
+console.log(result)
+
+
+/** 
+ * method bawaan js
+ * 5. find
+ * find adalah metode mengembalikan element pertama dalam array yang disediakan yang memenuhi fungsi pengujian yang disediakan jika tidak ada nilai yang memenuhi fungsi pengujian akan mengembalikan nilai undefined
+ * parameter yang dapat digunakan
+ * - element = element yang diproses
+ * - index = index dari element yang diproses dalam sebuah array 
+ * - array = aray dimana fungsi find itu sendiri di panggil  
+*/
+
+/** penggunaan */
+
+
+
+const buah1 = ['semangka', 'rambutan', 'apel']
+const result1 = buah1.find(hurufBuah => hurufBuah.length > 6 )
+console.log(result1) 
+
+
+
+/** 
+ * method bawaan js
+ * 6. forEach
+ * forEach adalah metode mengeksekusi fungsi yang disediakan sekali untuk setiap element array
+ * parameter yang dapat digunakan
+ * - element = element yang diproses
+ * - index = index dari element yang diproses dalam sebuah array 
+ * - array = aray dimana fungsi forEach itu sendiri di panggil  
+*/
+
+/** penggunaan */
+
+const arr2 = [1,2,3,4,5]
+let num1 = 0
+arr2.forEach(element => {
+    console.log(element)
+    num1++
+});
+
+console.log(num1)
+
+
+/** 
+ * method bawaan js
+ * 7. indexOf
+ *  indexOf adalah method yang mengembalikan index pertama dimana elemen tertentu dapat ditemukan dalam array atau -1 jika tidak ada
+ * parameter yang dapat digunakan
+ * - searchElement = element yang akan ditemukan di array
+ 
+*/
+
+/** penggunaan */
+
+const arr1 = [11, 1, 8 , 9, 12, 14]
+console.log(arr1.indexOf(9))
+
+
+
+/** 
+ * method bawaan js
+ * 8. findIndex
+ * findIndex adalah mengembalkan index element dalam array yamg memenuhi fungsi pengujian yang disediakan, jika tidak 
+ * 
+ * parameter yang dapat digunakan
+ * - element = element yang diproses
+ * - index = index dari element yang diproses dalam sebuah array 
+ * - array = aray dimana fungsi findIndex itu sendiri di panggil  
+ 
+*/
+
+/** penggunaan */
+
+const cars = ['bmw', 'toyota', 'honda']
+const indexBuah =  cars.findIndex(car => car === 'toyota')
+console.log(indexBuah)
+
+
+
+/** 
+ * method bawaan js
+ * 9.join
+ * join adalah metode membuat dan mengembalikan string baru dengan menggabungkan semua element dalam array
+ * parameter yang dapat digunakan
+ * - separator menentukan string untuk memisahkan setiap pasangan element yang berdekatan dari array
+ 
+*/
+
+/** penggunaan */
+
+const food =['mie', 'seblak', 'nasi goreng']
+const foods = food.join(' ')
+console.log(foods)
+
+
+/** 
+ * method bawaan js
+ * push
+ * push adalah metode menambahkan satu atau lebih element ke akhir array dan mengembalikan panjang array yang baru
+ * - elementN to menambahkan element ke array paling akhir
+*/
+
+/** penggunaan */
+
+let sports = ['soccer', 'baseball']
+let total = sports.push('football')
+
+
+
+
