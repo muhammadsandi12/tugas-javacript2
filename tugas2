@@ -1,0 +1,29 @@
+const array = [
+    'Abigail', 'Alexandra', 'Alison',
+    'Amanda', 'Angela', 'Bella',
+    'Carol', 'Caroline', 'Carolyn',
+    'Deirdre', 'Diana', 'Elizabeth',
+    'Ella', 'Faith', 'Olivia', 'Penelope']
+
+
+const searchName = (key,limit,callback) =>{
+
+    return callback (key, limit)
+}
+
+
+function filterNames(key, limit) {
+    let hasil = array.filter(function(element,index,arr) {
+       return element.toLowerCase().indexOf(key.toLowerCase()) !== -1 
+
+    })
+   
+    return hasil
+
+}
+
+
+
+
+
+console.log(searchName('an',3,filterNames))
