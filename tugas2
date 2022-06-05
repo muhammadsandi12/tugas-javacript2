@@ -13,13 +13,20 @@ const searchName = (key,limit,callback) =>{
 
 
 function filterNames(key, limit) {
-    let hasil = array.filter(function(element,index,arr) {
+    let hasil = array.filter(function(element) {
        return element.toLowerCase().indexOf(key.toLowerCase()) !== -1 
 
     })
    
-    return hasil
+    return limitNames(hasil,limit)
 
+}
+
+
+function limitNames(hasil,limit){
+    return hasil.filter((element, index) =>{
+        return index < limit
+    })
 }
 
 
