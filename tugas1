@@ -126,7 +126,7 @@ console.log(arr1.indexOf(9))
 /** 
  * method bawaan js
  * 8. findIndex
- * findIndex adalah mengembalkan index element dalam array yamg memenuhi fungsi pengujian yang disediakan, jika tidak 
+ * findIndex adalah mengembalkan index element dalam array yamg memenuhi fungsi pengujian yang disediakan, jika tidak ia akan mengembalikan -1 
  * 
  * parameter yang dapat digunakan
  * - element = element yang diproses
