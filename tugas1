@@ -101,13 +101,10 @@ console.log(result1)
 /** penggunaan */
 
 const arr2 = [1,2,3,4,5]
-let num1 = 0
-arr2.forEach(element => {
-    console.log(element)
-    num1++
+ arr2.forEach(element => {
+    console.log( element)
 });
 
-console.log(num1)
 
 
 /** 
