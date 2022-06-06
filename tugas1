@@ -138,8 +138,8 @@ console.log(arr1.indexOf(9))
 /** penggunaan */
 
 const cars = ['bmw', 'toyota', 'honda']
-const indexBuah =  cars.findIndex(car => car === 'toyota')
-console.log(indexBuah)
+const indexCars =  cars.findIndex(car => car === 'toyota')
+console.log(indexCars)
 
 
 
