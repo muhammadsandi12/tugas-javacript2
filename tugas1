@@ -37,7 +37,7 @@ console.log(arr)
 /** 
  * method bawaan js
  * 3. concat
- * split adalah menggabungkan string ke string panggilan dan mengembalikan string baru
+ * concat adalah menggabungkan string ke string panggilan dan mengembalikan string baru
  * parameter yang dapat digunakan
  * - strN = 1 string atau lebih untuk digabungkan 
  * 
