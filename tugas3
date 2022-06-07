@@ -1,22 +1,32 @@
-const deret = (nilaiAwal, nilaiAkhir,dataArray) =>{
+const seleksiNilai = (nilaiAwal, nilaiAkhir,dataArray) =>{
     
     let output = [];
     if(typeof(nilaiAkhir) == 'number' && typeof(nilaiAwal == 'number')){
         if(nilaiAwal > nilaiAkhir){
-            output = 'nilai awal harus lebih besar dari nilai akhir'
+            output = 'nilai awal harus lebih kecil dari nilai akhir'
         }else{
             if(dataArray.length < 5 ){
                 output = 'jumlah data dalam dataArray harus lebih dari 5'
             }else{
-                for (let index = 0; index < dataArray.length; index++) {
-                    if(dataArray[index] > nilaiAwal && dataArray[index] < nilaiAkhir ){
-                    output.push( dataArray[index]);
-                    output.sort(function(a,b){return a - b})
-    
-                    }else{
-                        output = 'nilai tidak ditemukan'
-                    }
-               }
+                dataArray.filter((el) =>{
+                    if(el < nilaiAkhir && el > nilaiAwal) {
+                        output.push(el)
+                            
+                      
+                }})
+                if(output.length === 0){
+                    output = 'nilai tidak ditemukan'
+                }
+                
+
+            //    dataArray.filter((element) =>{
+            //         if(element < nilaiAkhir&& element > nilaiAwal) {
+            //             output.push(element)
+            //             output.sort((a,b) => {return a-b})
+            //         }
+            //    } )
+           
+               
             }
         }
     } else{
@@ -28,6 +38,10 @@ const deret = (nilaiAwal, nilaiAkhir,dataArray) =>{
 
 }
 
-console.log(deret(10,20,[1,1,1,1,1,1,1]))
+console.log(seleksiNilai(5,20,[2, 25, 4, 14, 17, 30, 8]))
+console.log(seleksiNilai(15,3,[2,25,4,14,17,30,8]))
+console.log(seleksiNilai(4,14,[2,25,4]))
+console.log(seleksiNilai(5,17,[2,25,4,1,30,18]))
+
 
 
